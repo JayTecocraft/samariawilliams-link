@@ -15,6 +15,7 @@ import SupportiveAgency from '../images/logos/SupportiveAgency.png';
 
 // Component imports
 import LinkCard from "@/components/LinkCard";
+import { FreeTrialBanner } from "@/components/FreeTrial";
 
 // Data definitions
 interface SocialMediaLink {
@@ -154,6 +155,7 @@ const ContactButton: React.FC<ContactButtonProps> = ({ icon: Icon, link, title }
     className="text-base font-normal text-[#995900] p-3 rounded-full border border-[#995900] flex items-center"
     title={title}
     aria-label={title}
+    target="_blank"
   >
     <Icon className="size-6" />
   </a>
@@ -161,8 +163,8 @@ const ContactButton: React.FC<ContactButtonProps> = ({ icon: Icon, link, title }
 
 export default function Home() {
   return (
-    <div className="min-h-[100dvh] py-4">
-      <main className="flex flex-col h-full gap-8 max-w-xl mx-auto items-center sm:items-start shadow-2xs">
+    <div className="min-h-[100dvh] pt-4 pb-20">
+      <main className="flex flex-col h-full gap-8 max-w-xl mx-auto items-center sm:items-start">
         {/* Logo Section */}
         <div className="flex w-full">
           <Image
@@ -225,6 +227,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <FreeTrialBanner/>
     </div>
   );
 }
